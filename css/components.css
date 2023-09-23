@@ -1,5 +1,6 @@
 .main-title {
   position: relative;
+  z-index: 1;
   margin: 0 auto 80px;
   width: fit-content;
   font-size: 30px;
@@ -21,6 +22,7 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  z-index: -1;
   width: 12px;
   height: 12px;
   background-color: var(--main-color);
@@ -36,12 +38,10 @@
 }
 
 .main-title:hover::before {
-  z-index: -1;
   animation: left-move 0.5s linear forwards;
 }
 
 .main-title:hover::after {
-  z-index: -1;
   animation: right-move 0.5s linear forwards;
 }
 

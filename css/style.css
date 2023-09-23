@@ -301,6 +301,7 @@ header .container .nav a:hover::before {
 
   width: 0;
   height: 0;
+  border-radius: 50%;
 
   opacity: 0;
   background-color: rgb(255 255 255 / 20%);
