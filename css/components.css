@@ -16,7 +16,7 @@
 }
 
 .main-title::before,
-.articles h2::after {
+.main-title::after {
   content: "";
   position: absolute;
   top: 50%;
