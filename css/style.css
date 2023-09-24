@@ -542,3 +542,210 @@ header .container .nav a:hover::before {
   line-height: 1.5;
 }
 /* #endregion */
+
+/* #region team-members */
+.team-members .container {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.team-members .card {
+  position: relative;
+  z-index: 1;
+}
+
+.team-members .card::before,
+.team-members .card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  border-radius: 10px;
+  
+}
+
+.team-members .card::before {
+  z-index: -2;
+  width: calc(100% - 60px);
+  background-color: #f3f3f3;
+}
+
+.team-members .card::after {
+  z-index: -1;
+  background-color: #e4e4e4;
+
+  width: 0;
+  transition: var(--main-transition-duration);
+}
+
+.team-members .card:hover::after {
+  width: calc(100% - 60px);
+}
+
+.team-members .card .socials {
+  display: flex;
+  align-items: center;
+  padding-top: 60px;
+  margin-bottom: 30px;
+}
+
+.team-members .card .socials .contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.team-members .card a {
+  width: 60px;
+  height: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-decoration: none;
+}
+
+.team-members .card a i {
+  color: #777;
+}
+
+.team-members .card a:hover i {
+  color: var(--main-color-alt);
+} 
+
+.team-members .card a:hover i[class~="fa-facebook-f"] {
+  color: blue;
+} 
+
+.team-members .card a:hover i[class~="fa-youtube"] {
+  color: red;
+} 
+
+.team-members .card .socials img {
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+}
+
+.team-members .card:hover .socials img {
+  filter: grayscale(1);
+}
+
+.team-members .card .member-info {
+  padding-left: 80px;
+}
+
+.team-members .card .member-info h3 {
+  color: var(--main-color);
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.team-members .card .member-info h3 span {
+  font-size: 15px;
+  color: #70BBF7
+}
+
+.team-members .card .member-info p {
+  color: #777;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+/* #endregion */
+
+/* #region services */
+.services {
+  background-color: var(--section-background);
+}
+
+.services .container {
+  display: grid;
+  gap: 40px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.services .card {
+  text-align: center;
+  background-color: white;
+  position: relative;
+  box-shadow: 0 12px 20px 0 rgb(0 0 0 / 13%), 0 2px 4px 0 rgb(0 0 0 / 12%);
+  transition: var(--main-transition-duration);
+  counter-increment: service-no;
+}
+
+.services .card:hover {
+  transform: translateY(-10px);
+}
+
+.services .card::before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 3px;
+  width: 0;
+  transition: var(--main-transition-duration);
+  background-color: var(--main-color);
+
+}
+
+.services .card:hover::before {
+  width: 100%;
+}
+
+.services .card i {
+  color: #d5d5d5;
+  margin: 30px 0 20px;
+}
+
+.services .card h3 {
+  color: var(--main-color);
+  font-size: 25px;
+  margin-bottom: 40px;
+}
+
+.services .card .info {
+  padding: 15px;
+  text-align: right;
+  position: relative;
+  color: var(--main-color);
+  background-color: #f9f9f9;
+}
+
+.services .card .info::before {
+  content: "0" counter(service-no);
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  background-color: var(--main-color);
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 80px;
+  padding-right: 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: content-box;
+}
+
+.services .card .info::after {
+  content: "";
+  position: absolute;
+  left: 80px;
+  bottom: 0;
+  height: 100%;
+  width: 50px;
+  background-color: #d5d5d5;
+  transform: skewX(-30deg);
+}
+/* #endregion */
+
