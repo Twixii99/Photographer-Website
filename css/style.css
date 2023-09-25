@@ -625,8 +625,7 @@ header .container .nav a:hover::before {
 } 
 
 .team-members .card .socials img {
-  width: 300px;
-  height: 300px;
+  width: calc(100% - 60px);
   border-radius: 10px;
 }
 
