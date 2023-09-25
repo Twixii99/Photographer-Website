@@ -1358,4 +1358,148 @@ header .container .nav a:hover::before {
   font-size: 20px;
   font-style: italic;
 }
+
+.stats .card span:last-of-type {
+  color: var(--main-color-alt);
+}
 /* #endregion */
+
+/* #region request */
+.req {
+  padding: 0;
+  height: 100vh;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.req > div {
+  flex: 1;
+}
+
+.req .discount {
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+  background-size: cover;
+  background-image: url(../images/discount/discount-background1.jpeg);
+
+  animation: change-background 10s linear infinite;
+}
+
+.req .discount::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: rgb(23 135 224 / 97%);
+}
+
+@keyframes change-background {
+  50% {
+    background-image: url(../images/discount/discount-background2.jpeg);
+  }
+  100% {
+    background-image: url(../images/discount/discount-background1.jpeg);
+  }
+}
+
+.req .discount .content {
+  max-width: 540px;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.req .discount .content h1 {
+  font-size: 40px;
+  letter-spacing: -1px;
+}
+
+.req .discount .content p {
+  line-height: 1.6;
+  margin: 20px 0;
+  font-size: 18px;
+}
+
+.req .discount .content img {
+  width: 300px;
+  max-width: 100%;
+}
+
+.req .discount-req {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.req .discount-req .content {
+  box-sizing: content-box;
+  width: fit-content;
+  padding: 0 20px;
+}
+
+.req .discount-req .content h1 {
+  font-size: 40px;
+  letter-spacing: -2px;
+}
+
+.req .discount-req .content form .data {
+  display: block;
+
+  width: 100%;
+  border: none;
+  padding: 15px;
+  margin-bottom: 20px;
+  caret-color: var(--main-color);
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #ccc;
+}
+
+.req .discount-req .content form .data:focus {
+  outline: none;
+}
+
+.req .discount-req .content form .data:focus::placeholder {
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.req .discount-req .content form .data:focus:focus::placeholder {
+  opacity: 0;
+}
+
+.req .discount-req .content form textarea {
+  height: 200px;
+  resize: none;
+}
+
+.req .discount-req .content form input[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 15px;
+
+  border: none;
+  border-radius: 5px;
+
+  font-size: 20px;
+  font-weight: bold;
+
+  color: white;
+  cursor: pointer;
+  background-color: var(--main-color);
+  transition: var(--main-transition-duration);
+}
+
+.req .discount-req .content form input[type="submit"]:hover {
+  background-color: var(--main-color-alt);
+}
+/* #end region */
+
