@@ -1528,7 +1528,7 @@ header .container .nav a:hover::before {
 /* #region footer */
 .footer {
   padding-bottom: 0;
-  background-color: black;
+  background-color: #191919;
 }
 
 .footer .container {
@@ -1542,11 +1542,6 @@ header .container .nav a:hover::before {
     gap: 30px;
     text-align: center;
   }
-}
-
-.footer .about {
-  color: white;
-  background-color: black;
 }
 
 .footer .about h1 {
@@ -1571,43 +1566,34 @@ header .container .nav a:hover::before {
   text-decoration: none;
   color: #b9b9b9;
   background-color: #313131;
+
   width: 50px;
   height: 50px;
+
   display: inline-flex;
   justify-content: center;
   align-items: center;
+
   font-size: 20px;
   transition: var(--main-transition-duration);
 }
 
 .footer .about ul li:nth-child(1) a:hover {
-  color: #1877f2;
+  background-color: #1877f2;
 }
 
 .footer .about ul li:nth-child(2) a:hover {
-  color: var(--main-color);
+  background-color: #1da1f2;
 }
 
 .footer .about ul li:nth-child(3) a:hover {
-  color: red;
+  background-color: red;
 }
 
 .footer .about p {
   color: #b9b9b9;
   line-height: 2;
   margin-bottom: 16px;
-}
-
-.footer .images {
-  display: grid;
-  gap: 4px;
-  grid-template-columns: repeat(3, 1fr);
-  align-content: flex-start;
-}
-
-.footer .images img {
-  max-width: 100%;
-  border: 3px solid white;
 }
 
 .footer .links li {
@@ -1626,6 +1612,10 @@ header .container .nav a:hover::before {
 .footer .links li a {
   text-decoration: none;
   color: #b9b9b9;
+}
+
+.footer .links li:hover {
+  color: white;
 }
 
 .footer .links li a::before {
@@ -1653,6 +1643,18 @@ header .container .nav a:hover::before {
   color: #b9b9b9;
 }
 
+.footer .images {
+  display: grid;
+  gap: 4px;
+  grid-template-columns: repeat(3, 1fr);
+  align-content: flex-start;
+}
+
+.footer .images img {
+  max-width: 100%;
+  border: 3px solid white;
+}
+
 div.support {
   margin-top: 50px;
   padding: 25px 0;
@@ -1661,7 +1663,6 @@ div.support {
   text-align: center;
 
   color: #b9b9b9;
-  background-color: black;
   border-top: 1px solid #b9b9b9;
 }
 
