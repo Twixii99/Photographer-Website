@@ -1050,3 +1050,150 @@ header .container .nav a:hover::before {
 }
 
 /* #endregion */
+
+/* #region plans */
+.plans {
+  background-color: var(--section-background);
+}
+
+.plans .container {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.plans .card {
+  position: relative;
+  z-index: 1;
+  border-radius: 5px;
+  text-align: center;
+  background-color: white;
+  box-shadow: 0 12px 20px 0 rgb(0 0 0 / 13%), 0 2px 4px 0 rgb(0 0 0 / 12%);
+}
+
+@media (min-width: 992px) {
+  .plans .card.advanced {
+    top: -20px;
+  }
+}
+
+.plans .card::before,
+.plans .card::after {
+  content: "";
+  position: absolute;
+
+  width: 0;
+  height: 50%;
+
+  background-color: #f6f6f6;
+
+  z-index: -1;
+  transition: var(--main-transition-duration);
+}
+
+.plans .card::before {
+  top: 0;
+  right: 0;
+}
+
+.plans .card::after {
+  bottom: 0;
+  left: 0;
+}
+
+.plans .card:hover::before,
+.plans .card:hover::after {
+  width: 100%;
+}
+
+.plans .card .popular {
+  width: 40px;
+  padding: 10px;
+  position: absolute;
+  top: -5px;
+  right: 15px;
+
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  writing-mode: vertical-rl;
+  background-color: var(--main-color);
+}
+
+.plans .card .popular::after {
+  content: "";
+  position: absolute;
+  z-index: 3;
+  bottom: -40px;
+  left: 0;
+  border: 20px solid var(--main-color);
+  border-bottom-color: transparent;
+}
+
+.plans .card h2 {
+  font-weight: bold;
+  margin: 30px 0;
+  font-size: 25px;
+  letter-spacing: -1px;
+}
+
+.plans .card img {
+  width: 80px;
+  margin-bottom: 30px;
+}
+
+.plans .card .pricing {
+  margin-bottom: 20px;
+}
+
+.plans .card .pricing span:first-child {
+  display: block;
+  font-size: 60px;
+  font-weight: bold;
+  color: var(--main-color);
+  margin-bottom: 5px;
+}
+
+.plans .card .pricing span:last-child {
+  font-size: 14px;
+  color: #777;
+}
+
+.plans .card ul {
+  text-align: left;
+}
+
+.plans .card ul li {
+  padding: 20px;
+  border-top: 1px solid #eee;
+}
+
+.plans .card ul li::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f00c";
+  margin-right: 10px;
+  font-weight: 900;
+  color: var(--main-color);
+}
+
+.plans .card a {
+  text-decoration: none;
+  display: block;
+  margin: 30px auto 40px;
+  color: var(--main-color);
+  font-size: 20px;
+  font-weight: bold;
+  border: 2px solid var(--main-color);
+  width: fit-content;
+  padding: 15px 20px;
+  border-radius: 6px;
+  transition: var(--main-transition-duration);
+}
+
+.plans .card a:hover {
+  color: white;
+  border-color: white;
+  background-color: var(--main-color);
+}
+/* #endregion */
